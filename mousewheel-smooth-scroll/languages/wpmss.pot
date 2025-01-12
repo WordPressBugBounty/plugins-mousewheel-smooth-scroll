@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MouseWheel Smooth Scroll\n"
-"POT-Creation-Date: 2025-01-12 12:45+0000\n"
+"POT-Creation-Date: 2025-01-12 14:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ing. Jakub Novák <info@kubiq.sk>\n"
 "Language-Team: KubiQ <info@kubiq.sk>\n"
@@ -18,47 +18,48 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ./.."
 
-#: mousewheel-smooth-scroll.php:235
+#: mousewheel-smooth-scroll.php:238
 #, php-format
 msgid "%sClick here%s to read more about these settings in the GitHub readme."
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:241
+#: mousewheel-smooth-scroll.php:244
 msgid "(between 0 and 1)"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:336
+#: mousewheel-smooth-scroll.php:348
 msgid "Acceleration"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:245 mousewheel-smooth-scroll.php:254
-#: mousewheel-smooth-scroll.php:263 mousewheel-smooth-scroll.php:279
-#: mousewheel-smooth-scroll.php:288 mousewheel-smooth-scroll.php:297
-#: mousewheel-smooth-scroll.php:313 mousewheel-smooth-scroll.php:322
-#: mousewheel-smooth-scroll.php:331 mousewheel-smooth-scroll.php:345
-#: mousewheel-smooth-scroll.php:354 mousewheel-smooth-scroll.php:369
-#: mousewheel-smooth-scroll.php:378 mousewheel-smooth-scroll.php:404
+#: mousewheel-smooth-scroll.php:248 mousewheel-smooth-scroll.php:257
+#: mousewheel-smooth-scroll.php:266 mousewheel-smooth-scroll.php:275
+#: mousewheel-smooth-scroll.php:291 mousewheel-smooth-scroll.php:300
+#: mousewheel-smooth-scroll.php:309 mousewheel-smooth-scroll.php:325
+#: mousewheel-smooth-scroll.php:334 mousewheel-smooth-scroll.php:343
+#: mousewheel-smooth-scroll.php:357 mousewheel-smooth-scroll.php:366
+#: mousewheel-smooth-scroll.php:381 mousewheel-smooth-scroll.php:390
+#: mousewheel-smooth-scroll.php:416
 msgid "default:"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:236
+#: mousewheel-smooth-scroll.php:239
 msgid "If you need more settings in here, just let me know ;)"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:222
+#: mousewheel-smooth-scroll.php:225
 msgid "JS library"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:359
+#: mousewheel-smooth-scroll.php:371
 msgid "Keyboard Settings"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:241
+#: mousewheel-smooth-scroll.php:244
 msgid "Linear interpolation intensity"
 msgstr ""
 
 #. Name of the plugin
-#: mousewheel-smooth-scroll.php:194
+#: mousewheel-smooth-scroll.php:197
 msgid "MouseWheel Smooth Scroll"
 msgstr ""
 
@@ -66,19 +67,19 @@ msgstr ""
 msgid "MouseWheel smooth scrolling for your WordPress website"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:383
+#: mousewheel-smooth-scroll.php:395
 msgid "Other"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:303
+#: mousewheel-smooth-scroll.php:315
 msgid "Pulse (less tweakable)<br>ratio of \"tail\" to \"acceleration\""
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:270
+#: mousewheel-smooth-scroll.php:282
 msgid "Scrolling Core"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:217
+#: mousewheel-smooth-scroll.php:220
 msgid "Scrolling JS library script"
 msgstr ""
 
@@ -86,31 +87,29 @@ msgstr ""
 msgid "Smooth Scroll"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:250
+#: mousewheel-smooth-scroll.php:253
 msgid "The duration of scroll animation"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:425
-#, php-format
-msgid ""
-"The main difference between Lenis and SmoothScroll is that %sSmoothScroll "
-"has an acceleration%s, so the faster you move your mouse wheel, the faster "
-"your website will scroll, but %sSmoothScroll does not work on MacOS or iOS%s "
-"in many versions of Safari and Firefox. %sLenis works everywhere, but it has "
-"no acceleration%s, so no matter how fast you move your scroll wheel, your "
-"website will still scroll the same."
+#: mousewheel-smooth-scroll.php:271
+msgid "The easing function to use for the scroll animation."
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:259
+#: mousewheel-smooth-scroll.php:262
 msgid "The multiplier to use for mouse wheel events"
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:419
+#: mousewheel-smooth-scroll.php:431
 msgid ""
 "This plugin is just a WordPress implementation of various JS smooth scroll "
 "library scripts."
 msgstr ""
 
-#: mousewheel-smooth-scroll.php:424
+#: mousewheel-smooth-scroll.php:436
 msgid "You can find many answers or discussions in their GIT repositories."
+msgstr ""
+
+#: mousewheel-smooth-scroll.php:271
+#, php-format
+msgid "You can pick one from %sEasings.net%s"
 msgstr ""

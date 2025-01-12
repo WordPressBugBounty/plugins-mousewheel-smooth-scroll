@@ -4,7 +4,7 @@ Donate link: https://www.paypal.me/jakubnovaksl
 Tags: smooth scroll, mousewheel scroll, scrolling
 Requires at least: 3.0.1
 Tested up to: 6.7
-Stable tag: 6.7
+Stable tag: 6.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,9 +29,12 @@ You can play with settings and test it here:
 
 == Changelog ==
 
+= 6.7.1 =
+* new easing option for Lenis library
+
 = 6.7 =
 * tested on WP 6.7
-* new possibility to switch to a LENIS smooth scroll library
+* new possibility to switch to a Lenis smooth scroll library
 
 = 6.6 =
 * tested on WP 6.6

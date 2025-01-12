@@ -3,7 +3,7 @@
 	Plugin Name: MouseWheel Smooth Scroll
 	Plugin URI: https://kubiq.sk
 	Description: MouseWheel smooth scrolling for your WordPress website
-	Version: 6.7
+	Version: 6.7.1
 	Author: KubiQ
 	Author URI: https://kubiq.sk
 	Text Domain: wpmss
@@ -83,6 +83,7 @@ class wpmss{
 		$this->settings['lenis']['lerp'] = empty( $unsanitized_settings['lenis']['lerp'] ) ? 0.1 : floatval( $unsanitized_settings['lenis']['lerp'] );
 		$this->settings['lenis']['duration'] = empty( $unsanitized_settings['lenis']['duration'] ) ? 1.2 : floatval( $unsanitized_settings['lenis']['duration'] );
 		$this->settings['lenis']['wheelMultiplier'] = empty( $unsanitized_settings['lenis']['wheelMultiplier'] ) ? 1 : floatval( $unsanitized_settings['lenis']['wheelMultiplier'] );
+		$this->settings['lenis']['easing'] = empty( $unsanitized_settings['lenis']['easing'] ) ? 'Math.min(1,1.001-Math.pow(2,-10*x))' : sanitize_text_field( $unsanitized_settings['lenis']['easing'] );
 
 		$this->settings['general']['frameRate'] = empty( $unsanitized_settings['general']['frameRate'] ) ? 150 : intval( $unsanitized_settings['general']['frameRate'] );
 		$this->settings['general']['animationTime'] = empty( $unsanitized_settings['general']['animationTime'] ) ? 1000 : intval( $unsanitized_settings['general']['animationTime'] );
@@ -138,11 +139,13 @@ class wpmss{
 					'autoRaf:true,' . 
 					'lerp:%s,' . 
 					'duration:%s,' . 
-					'wheelMultiplier:%s' . 
+					'wheelMultiplier:%s,' . 
+					'easing:x=>%s' . 
 				'})',
 				floatval( $this->settings['lenis']['lerp'] ),
 				floatval( $this->settings['lenis']['duration'] ),
 				floatval( $this->settings['lenis']['wheelMultiplier'] ),
+				esc_html( $this->settings['lenis']['easing'] ),
 			);
 			file_put_contents( $this->uploads['basedir'] . '/wpmss/lenis-init.min.js', $content );
 		}
@@ -261,6 +264,15 @@ class wpmss{
 				<td>
 					<input type="number" name="lenis[wheelMultiplier]" placeholder="1" value="<?php echo $this->settings['lenis']['wheelMultiplier'] ?>" id="lenis_3">
 					&emsp;<small class="default"><?php _e( 'default:', 'wpmss' ) ?> 1</small>
+				</td>
+			</tr>
+			<tr class="library-visibility darkroomengineering">
+				<th>
+					<label for="lenis_4">easing:<br><small style="font-weight:400"><?php _e( 'The easing function to use for the scroll animation.', 'wpmss' ) ?><br><?php printf( __( 'You can pick one from %sEasings.net%s', 'wpmss' ), '<a href="https://easings.net" target="_blank">', '</a>' ) ?></small></label> 
+				</th>
+				<td>
+					<input type="text" name="lenis[easing]" placeholder="Math.min(1,1.001-Math.pow(2,-10*x))" value="<?php echo $this->settings['lenis']['easing'] ?>" id="lenis_4" style="width:260px">
+					&emsp;<small class="default"><?php _e( 'default:', 'wpmss' ) ?> Math.min(1,1.001-Math.pow(2,-10*x))</small>
 				</td>
 			</tr>
 
@@ -422,7 +434,6 @@ class wpmss{
 				<li>2. <a href="https://github.com/darkroomengineering/lenis" target="_blank">LENIS from darkroomengineering</a></li>
 			</ul>
 			<p><?php _e( 'You can find many answers or discussions in their GIT repositories.', 'wpmss' ) ?></p>
-			<p><?php printf( __( 'The main difference between Lenis and SmoothScroll is that %sSmoothScroll has an acceleration%s, so the faster you move your mouse wheel, the faster your website will scroll, but %sSmoothScroll does not work on MacOS or iOS%s in many versions of Safari and Firefox. %sLenis works everywhere, but it has no acceleration%s, so no matter how fast you move your scroll wheel, your website will still scroll the same.', 'wpmss' ), '<strong>', '</strong>', '<strong>', '</strong>', '<strong>', '</strong>' ) ?></p>
 		</div><?php
 	}
 }
